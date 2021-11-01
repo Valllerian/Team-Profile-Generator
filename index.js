@@ -32,5 +32,59 @@ function addManager(){
     const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
     employeeList.push(manager);
     console.log(employeeList);
+    nextStep();
+        })
+};
+
+function nextStep(){
+    return inquirer.prompt([
+        {
+            type: 'list',
+            choices: ['Add an Inter', 'Add an Engineer', 'Skip'],
+            name: 'teamBuild',
+        },
+    ])
+    .then((answers) => {
+        if(answers.teamBuild === 'Add an Inter'){
+            addInter();
+        };
+        if(answers.teamBuild === 'Add an Engineer'){
+            addEngineer();
+        }
+        else{
+            console.log(employeeList);
+            // build html page when done\
+            console.log('Your Team website is successfully generated.');
+        };
+    })
+};
+
+function addInter(){
+    return inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the "Intern" name?',
+            name: 'internName',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Intern" ID. ',
+            name: 'internID',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Intern" email.',
+            name: 'internEmail',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Intern" school.',
+            name: 'internSchool',
+        },
+        ])
+        .then((answers) => {
+            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
+            employeeList.push(intern);
+            nextStep();
         })
 }
