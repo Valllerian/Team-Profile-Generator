@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager')
+const Intern = require('./lib/Intern')
+const Engineer = require('./lib/Engineer')
 
 const employeeList = [];
 
@@ -87,4 +89,34 @@ function addInter(){
             employeeList.push(intern);
             nextStep();
         })
-}
+};
+
+function addEngineer(){
+    return inquirer.prompt([
+        {
+            type: 'input',
+            message: 'What is the "Engineer" name?',
+            name: 'engineerName',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Engineer" ID. ',
+            name: 'engineerID',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Engineer" email.',
+            name: 'engineerEmail',
+        },
+        {
+            type: 'input',
+            message: 'Enter "Engineer" gitHub username.',
+            name: 'engineerGitHub',
+        },
+        ])
+        .then((answers) => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGitHub);
+            employeeList.push(engineer);
+            nextStep();
+        })
+};
