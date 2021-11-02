@@ -1,9 +1,5 @@
 const fs = require('fs');
-
-
-
-const generateHtml = employeeList => {
-const htmlBody = `<!DOCTYPE html>
+var htmlBody = `<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -17,29 +13,37 @@ const htmlBody = `<!DOCTYPE html>
 <header>
 <h>My Team: </h>  
 </header>`;
-    employeeList.forEach(employee => {
-    htmlBody += `<div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
-    });
+
+const generateHtml = (employeeList) => {
+    employeeList.forEach(element => {
+   
         if(element.getRole() === "Manager"){
+            htmlBody += `<div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
             htmlBody += `<i class="fas fa-assistive-listening-systems"></i>` + `${element.getRole()}\n
             <h6 class="card-subtitle mb-2 text-muted">Employee ID:${element.getId()} </h6>\n
             <p class="card-text">Contact me at:<a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>\n
             <p class="card-text">Or reach me at:${element.officeNumber};</p>\n`;
         };
         if(element.getRole() === "Intern"){
+            htmlBody += `<div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
             htmlBody += `<i class="fas fa-baby"></i>` + `${element.getRole()}\n
             <h6 class="card-subtitle mb-2 text-muted">Employee ID:${element.getId()} </h6>\n
             <p class="card-text">Contact me at:<a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>\n
             <p class="card-text">I go to:${element.getSchool()};</p>\n`;
         };
         if(element.getRole() === "Engineer"){
+            htmlBody += `<div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
             htmlBody += `<i class="fas fa-cogs"></i>` + `${element.getRole()}\n
             <h6 class="card-subtitle mb-2 text-muted">Employee ID:${element.getId()} </h6>\n
             <p class="card-text">Contact me at:<a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>\n
             <p class="card-text">Find me on GitHub:${element.getGitHub()};</p>\n`;
-        };
+        }});
         htmlBody += `</body></html>`;
         fs.writeFileSync('index.html',htmlBody);
 

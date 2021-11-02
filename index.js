@@ -54,9 +54,10 @@ function nextStep(){
             addEngineer();
         }
         else{
+            console.log('Your Team website is successfully generated.');
             htmlBuilder.generateHtml(employeeList);
             // build html page when done\
-            console.log('Your Team website is successfully generated.');
+            
         };
     })
 };
