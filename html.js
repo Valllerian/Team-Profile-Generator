@@ -16,7 +16,8 @@ const generateHtml = (employeeList) => {
     <header>
     <h>My Team: </h>  
     </header>
-    <div>\n`;
+    <div class="row">
+    `;
     employeeList.forEach(element => {
         if(element.getRole() === "Manager"){
             htmlBody += `<div class="card container" style="width: 18rem;">
@@ -25,30 +26,32 @@ const generateHtml = (employeeList) => {
             htmlBody += `<i class="fas fa-assistive-listening-systems"></i>` + `${element.getRole()}
             <h6 class="card-text">Employee ID:${element.getId()} </h6>
             <p class="card-text">Contact me at: <a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>
-            <p class="card-text">Or reach me at:${element.officeNumber};</p>
-            </div></body></html>`;
+            <p class="card-text">Or reach me at:${element.officeNumber};</p>\n
+            </div></div>\n`
         };
         if(element.getRole() === "Intern"){
-            htmlBody += `<div class="card" style="width: 18rem;">
+            htmlBody += `<div class="card container" style="width: 18rem;">
             <div class="card-body memberCard">
             <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
             htmlBody += `<i class="fas fa-baby"></i>` + `${element.getRole()}\n
             <h6 class="card-text">Employee ID:${element.getId()} </h6>\n
             <p class="card-text">Contact me at: <a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>\n
             <p class="card-text">I go to:${element.getSchool()};</p>\n
-            </div></body></html>`;
+            </div></div>\n`
+            
         };
         if(element.getRole() === "Engineer"){
-            htmlBody += `<div class="card" style="width: 18rem;">
+            htmlBody += `<div class="card container" style="width: 18rem;">
             <div class="card-body memberCard">
             <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
             htmlBody += `<i class="fas fa-cogs"></i>` + `${element.getRole()}\n
             <h6 class="card-text">Employee ID:${element.getId()} </h6>\n
             <p class="card-text">Contact me at: <a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>\n
             <p class="card-text">Find me on GitHub:${element.getGitHub()};</p>\n
-            </div></body></html>`;
+            </div></div>\n`
         }
     });
+        htmlBody += `</div></body></html>`;
         fs.writeFileSync('index.html',htmlBody);
 
 };
