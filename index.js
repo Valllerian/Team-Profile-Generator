@@ -53,12 +53,10 @@ function nextStep(){
         if(answers.teamBuild === 'Add an Engineer'){
             addEngineer();
         }
-        else{
-            
+        if(answers.teamBuild === 'Skip'){
             htmlBuilder.generateHtml(employeeList);
             console.log('Your Team website is successfully generated.');
-            // build html page when done\
-            
+            // build html page when done\   
         };
     })
 };

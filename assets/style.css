@@ -25,3 +25,8 @@ body {
 #idNumber {
 color: ghostwhite;
 }
+
+.row {
+    margin-left: 10vmin;
+    margin-right: 10vmin;
+}
