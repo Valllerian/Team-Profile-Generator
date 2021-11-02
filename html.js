@@ -23,7 +23,7 @@ const generateHtml = (employeeList) => {
             htmlBody += `<div class="card container" style="width: 18rem;">
             <div class="card-body memberCard">
             <h5 class="card-title"> ${element.getName()}'s Profile</h5>\n`
-            htmlBody += `<i class="fas fa-assistive-listening-systems"></i>` + `${element.getRole()}
+            htmlBody += `<i class="fas fa-assistive-listening-systems"></i> ` + `${element.getRole()}
             <h6 class="card-text">Employee ID: ${element.getId()} </h6>
             <p class="card-text">Contact me at: <a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>
             <p class="card-text">Or reach me at: ${element.officeNumber};</p>
@@ -33,30 +33,28 @@ const generateHtml = (employeeList) => {
             htmlBody += `<div class="card container" style="width: 18rem;">
             <div class="card-body memberCard">
             <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
-            htmlBody += `<i class="fas fa-baby"></i>` + `${element.getRole()}
+            htmlBody += `<i class="fas fa-baby"></i> ` + `${element.getRole()}
             <h6 class="card-text">Employee ID: ${element.getId()} </h6>
             <p class="card-text">Contact me at: <a href="mailto: ${element.getEmail()}">${element.getEmail()}</a></p>
             <p class="card-text">I go to: ${element.getSchool()};</p>
-            </div></div>\n`
-            
+            </div></div>\n`  
         };
         if(element.getRole() === "Engineer"){
             htmlBody += `<div class="card container" style="width: 18rem;">
             <div class="card-body memberCard">
             <h5 class="card-title">${element.getName()}'s Profile</h5>\n`
-            htmlBody += `<i class="fas fa-cogs"></i>` + `${element.getRole()}
+            htmlBody += `<i class="fas fa-cogs"></i> ` + `${element.getRole()}
             <h6 class="card-text">Employee ID: ${element.getId()} </h6>
             <p class="card-text">Contact me at: <a href="mailto:${element.getEmail()}">${element.getEmail()}</a></p>
             <p class="card-text">Find me on GitHub:<a href="https://github.com/${element.getGitHub()}" target="_blank"><i class="fab fa-github"></i></a>;</p>
             </div></div>\n`
         }
-        
     });
         htmlBody += `</div></body>
             <footer class="bg-light text-center text-lg-start">
-            <div class="text-center p-3" style="background-color: black;">
+            <div class="text-center text-light p-3" style="background-color: black;">
             © 2020 Copyright:
-            <a class="text-light" href="https://github.com/Valllerian">Valerii Bihun</a>
+            <a class="text-light" href="https://github.com/Valllerian"> Valerii Bihun</a>
             </div>
              </footer>
              </html>`;
