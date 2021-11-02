@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 const Engineer = require('./lib/Engineer')
+const htmlBuilder = require('./html.js')
 
 const employeeList = [];
 
@@ -33,7 +34,6 @@ function addManager(){
         .then((answers) =>{
     const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber);
     employeeList.push(manager);
-    console.log(employeeList);
     nextStep();
         })
 };
@@ -54,7 +54,7 @@ function nextStep(){
             addEngineer();
         }
         else{
-            console.log(employeeList);
+            htmlBuilder.generateHtml(employeeList);
             // build html page when done\
             console.log('Your Team website is successfully generated.');
         };
