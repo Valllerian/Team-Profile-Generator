@@ -1,0 +1,27 @@
+header {
+    font-size: 25px;
+    color: ghostwhite;
+    background-color: black;
+    text-align: center;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+.container {
+    margin-top: 5vmin;
+    background-color: dimgray;
+    outline:5px solid ghostwhite;
+}
+
+.memberCard {
+    color: floralwhite;
+}
+
+#idNumber {
+color: ghostwhite;
+}
