@@ -53,7 +53,7 @@ const generateHtml = (employeeList) => {
         htmlBody += `</div></body>
             <footer class="bg-light text-center text-lg-start">
             <div class="text-center text-light p-3" style="background-color: black;">
-            © 2020 Copyright:
+            © 2021 Copyright:
             <a class="text-light" href="https://github.com/Valllerian"> Valerii Bihun</a>
             </div>
              </footer>

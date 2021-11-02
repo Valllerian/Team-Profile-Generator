@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager')
 const Intern = require('./lib/Intern')
 const Engineer = require('./lib/Engineer')
-const htmlBuilder = require('./html.js')
+const htmlBuilder = require('./src/html.js')
 
 const employeeList = [];
 
