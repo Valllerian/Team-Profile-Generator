@@ -2,6 +2,7 @@ const fs = require('fs');
 
 
 const generateHtml = (employeeList) => {
+    // var holds the first part pf the html code;
     var htmlBody = `<!DOCTYPE html>
     <html>
     <head>
@@ -18,6 +19,7 @@ const generateHtml = (employeeList) => {
     </header>
     <div class="row">
     `;
+    // depending on what we have stored in employeeList our html file will have next sections generated:
     employeeList.forEach(element => {
         if(element.getRole() === "Manager"){
             htmlBody += `<div class="card container" style="width: 18rem;">
@@ -50,6 +52,7 @@ const generateHtml = (employeeList) => {
             </div></div>\n`
         }
     });
+        // finishing the html code with closing body and adding footer;
         htmlBody += `</div></body>
             <footer class="bg-light text-center text-lg-start">
             <div class="text-center text-light p-3" style="background-color: black;">
@@ -58,6 +61,7 @@ const generateHtml = (employeeList) => {
             </div>
              </footer>
              </html>`;
+            //  writing file all the html code stored in htmlBody;
         fs.writeFileSync('index.html',htmlBody);
 
 };
