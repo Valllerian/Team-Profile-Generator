@@ -26,13 +26,11 @@ Node.js command-line application that takes in information about employees on a 
 - Run the app by entering:  `node index.js`;
 - Answer all questions with user input or select items;
 - Use generated index.html as your team profile template;
-
 <br>
 <img alt="Test Results" src="assets/images/image02.jpg" />
 <br>
 
-<h2>App usage video walkthrough:</h2>
-
+<h3>Application`s usage video-walkthrough:</h3>
 <a href="https://youtu.be/V2cajz8K5wo" target="_blank">Watch on YouTube</a>
 
 ## License
