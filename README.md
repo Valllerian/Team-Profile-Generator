@@ -26,6 +26,10 @@ Node.js command-line application that takes in information about employees on a 
 - Run the app by entering:  `node index.js`;
 - Answer all questions with user input or select items;
 - Use generated index.html as your team profile template;
+
+<br>
+<img alt="Test Results" src="assets/images/image02.jpg" />
+<br>
     
 ## License
     
@@ -56,6 +60,10 @@ Find more information at https://opensource.org/licenses/MIT.
 - 'test' library includes 4 folders with tests for each class (Employee\Manager\Intern\Engineer);
 - Make sure 'jest' is installed and linked to the working directory | `npm i jest`;
 - Open working directory in the browser and run tests | `npm run test`;
+
+<br>
+<img alt="Test Results" src="assets/images/image01.jpg" />
+<br>
     
 ## Questions
     
