@@ -30,7 +30,11 @@ Node.js command-line application that takes in information about employees on a 
 <br>
 <img alt="Test Results" src="assets/images/image02.jpg" />
 <br>
-    
+
+<h2>App usage video walkthrough:</h2>
+
+<a href="https://youtu.be/V2cajz8K5wo" target="_blank">Watch on YouTube</a>
+
 ## License
     
 
